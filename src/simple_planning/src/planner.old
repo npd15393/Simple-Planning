@@ -1,0 +1,33 @@
+#include "ros/ros.h"
+#include "simple_planning/planner_service.h"
+
+bool disp(simple_planning::planner_service::Request  &req, simple_planning::planner_service::Response &res)
+{	
+	res.ans=req.a*req.b;
+	return true;
+}
+
+struct position{
+	int x;
+	int y;
+	int yaw;
+};
+
+
+// class planner{
+// public:
+// 	planner();
+// 	generate_plan()
+// };
+
+int main(int argc, char **argv)
+{
+	ros::init(argc, argv, "planner_node");
+	ros::NodeHandle n;
+	
+	ros::ServiceServer service = n.advertiseService("get_plan", disp);
+	ROS_INFO("planner init");
+	ros::spin();
+
+	return 0;
+}
