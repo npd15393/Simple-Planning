@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "simple_planning/planner_service.h"
+#include "simple_planning/get_plan.h"
 #include <cstdlib>
 #include "simple_planning/position.h"
 #include <string.h>

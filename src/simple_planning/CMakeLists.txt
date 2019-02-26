@@ -57,7 +57,8 @@ position.msg
 ## Generate services in the 'srv' folder
 add_service_files(
    FILES
-planner_service.srv
+get_plan.srv
+update_goal.srv
 #   Service1.srv
 #   Service2.srv
  )
@@ -200,10 +201,14 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(get_plan src/planner.cpp)
-target_link_libraries(get_plan ${catkin_LIBRARIES})
-add_dependencies(get_plan simple_planner_gencpp)
+#add_executable(get_plan src/planner.cpp)
+#target_link_libraries(get_plan ${catkin_LIBRARIES})
+#add_dependencies(get_plan simple_planner_gencpp)
  
-add_executable(agent_client src/agent.cpp)
-target_link_libraries(agent_client ${catkin_LIBRARIES})
-add_dependencies(agent_client simple_planner_gencpp)
+add_executable(update_goal src/update_goal.cpp)
+target_link_libraries(update_goal ${catkin_LIBRARIES})
+add_dependencies(update_goal simple_planner_gencpp)
+
+#add_executable(agent_client src/agent.cpp)
+#target_link_libraries(agent_client ${catkin_LIBRARIES})
+#add_dependencies(agent_client simple_planner_gencpp)

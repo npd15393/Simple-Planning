@@ -1,0 +1,2 @@
+simple_planning
+-DCATKIN_DEVEL_PREFIX=/home/endo/bito/devel -DCMAKE_INSTALL_PREFIX=/home/endo/bito/install -G Unix Makefiles

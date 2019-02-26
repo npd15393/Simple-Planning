@@ -1,0 +1,8 @@
+prefix=/home/endo/bito/devel
+
+Name: simple_planning
+Description: Description of simple_planning
+Version: 0.0.0
+Cflags: -I/home/endo/bito/devel/include
+Libs: -L/home/endo/bito/devel/lib 
+Requires: roscpp std_msgs message_runtime
